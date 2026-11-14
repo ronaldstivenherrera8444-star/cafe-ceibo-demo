@@ -47,6 +47,10 @@ const spy = new IntersectionObserver(es => {
   }
 }, { rootMargin: '-45% 0px -50% 0px' });
 links.forEach((_, id) => { const s = document.getElementById(id); if (s) spy.observe(s); });
+spy.observe($('.hero'));
+const demoBar = $('[data-demo-bar]');
+const medir = () => document.documentElement.style.setProperty('--demo-h', (demoBar ? demoBar.offsetHeight : 0) + 'px');
+medir(); addEventListener('resize', medir, { passive: true });
 
 /* ---- carta: pestañas accesibles (flechas, Inicio, Fin) ---- */
 const tabs = $$('[role="tab"]');

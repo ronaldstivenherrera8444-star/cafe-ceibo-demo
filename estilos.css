@@ -38,6 +38,7 @@ h3 { font: 600 .8125rem/1.4 var(--f-text); letter-spacing: .12em; text-transform
 .btn:active { transform: scale(.97); }
 .btn--primary { background: var(--accent); color: var(--on-accent); }
 .btn--secondary { border-color: var(--ink); background: transparent; }
+.btn:focus-visible { outline-offset: 4px; }
 .btn svg { width: 14px; height: 14px; transition: transform .25s var(--ease); }
 @media (hover: hover) {
   .btn--primary:hover { background: color-mix(in srgb, var(--accent) 86%, #000); }
@@ -63,6 +64,9 @@ h3 { font: 600 .8125rem/1.4 var(--f-text); letter-spacing: .12em; text-transform
 .nav__link { position: relative; display: inline-flex; align-items: center; min-height: 44px; font-size: .9375rem; font-weight: 500; text-decoration: none; color: var(--muted); transition: color .2s ease-out; }
 .nav__link::after { content: ""; position: absolute; left: 0; right: 0; bottom: 8px; height: 1px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease); }
 .nav__link[aria-current], .nav__link:focus-visible { color: var(--ink); }
+.nav__link:focus-visible { outline-offset: 6px; border-radius: 2px; }
+.nav__link:active { color: var(--accent); }
+.nav__logo:active, .link:active { opacity: .7; }
 .nav__link[aria-current]::after { transform: scaleX(1); }
 @media (hover: hover) { .nav__link:hover { color: var(--ink); } .nav__link:hover::after { transform: scaleX(1); } }
 .nav__toggle { display: none; width: 48px; height: 48px; margin-right: -12px; border: 0; background: none; cursor: pointer; }
@@ -84,33 +88,38 @@ h3 { font: 600 .8125rem/1.4 var(--f-text); letter-spacing: .12em; text-transform
   .nav-open body { overflow: hidden; }
 }
 
-/* ---------- portada ---------- */
-.hero { padding-top: clamp(24px, 4vw, 56px); }
-.hero__grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(32px, 5vw, 80px); align-items: end; }
-.hero__copy { padding-bottom: clamp(8px, 3vw, 48px); }
-.hero h1 { margin-bottom: 28px; }
+/* ---------- portada: dos mitades; el texto alineado con la retícula, la fotografía a sangre hasta el borde ---------- */
+.hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); min-height: min(calc(100svh - var(--nav-h) - var(--demo-h, 0px)), 880px); }
+.hero__copy { display: flex; flex-direction: column; padding: clamp(40px, 5vw, 72px) clamp(32px, 5vw, 80px) 0 max(var(--pad), calc((200% - 1240px) / 2 + var(--pad))); }
+.hero__main { margin-block: auto; padding-bottom: clamp(32px, 4vw, 56px); }
+.hero h1 { font-size: clamp(2.75rem, 5.7vw, 5.5rem); margin-bottom: 28px; }
 .hero h1 em { font-style: italic; color: var(--accent); }
 .hero .lead { margin-bottom: 36px; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
-.hero__media { position: relative; overflow: hidden; aspect-ratio: 4 / 5; max-height: min(78vh, 760px); width: 100%; background: var(--surface); }
-.hero__media img { width: 100%; height: 100%; object-fit: cover; }
-.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: clamp(40px, 6vw, 80px); border-top: 1px solid var(--line); }
-.facts > div { padding: 20px 24px 0 0; }
-.facts > div + div { padding-left: 24px; border-left: 1px solid var(--line); }
+.hero__media { position: relative; min-height: 560px; background: var(--surface); }
+.hero__media > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero__detail { position: absolute; left: clamp(-44px, -2.6vw, -28px); bottom: clamp(96px, 11vw, 150px); width: clamp(150px, 14vw, 210px); aspect-ratio: 4 / 5; border: 8px solid var(--bg); overflow: hidden; background: var(--surface); }
+.hero__detail img { width: 100%; height: 100%; object-fit: cover; }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); padding-bottom: clamp(24px, 3vw, 40px); }
+.facts > div { padding: 18px 20px 0 0; }
+.facts > div + div { padding-left: 20px; border-left: 1px solid var(--line); }
 .facts dt { font: 600 .75rem/1.4 var(--f-text); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
-.facts dd { font: 500 1.375rem/1.25 var(--f-display); }
+.facts dd { font: 500 1.1875rem/1.25 var(--f-display); }
+@media (max-width: 1099px) { .hero__detail { display: none; } }
 @media (max-width: 899px) {
-  .hero { padding-top: 0; }
-  .hero__grid { grid-template-columns: 1fr; gap: 28px; }
-  .hero__media { order: -1; margin-inline: calc(var(--pad) * -1); width: auto; aspect-ratio: 16 / 10; max-height: 32vh; }
-  .hero h1 { margin-bottom: 18px; }
+  .hero__grid { grid-template-columns: 1fr; min-height: 0; }
+  .hero__media { order: -1; min-height: 0; height: clamp(230px, 42svh, 520px); }
+  .hero__copy { padding: 28px var(--pad) 0; }
+  .hero__main { padding-bottom: 32px; }
+  .hero h1 { font-size: clamp(2.75rem, 8vw, 4.25rem); margin-bottom: 18px; }
   .hero .lead { margin-bottom: 24px; }
-  .hero__copy { padding-bottom: 0; }
   .hero .btn-row .btn { flex: 1 1 auto; }
 }
 @media (max-width: 599px) {
-  .facts { grid-template-columns: 1fr; }
+  .hero__media { height: clamp(220px, 34svh, 340px); }
+  .facts { grid-template-columns: 1fr; padding-bottom: 8px; }
   .facts > div, .facts > div + div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 14px 0; border-left: 0; border-bottom: 1px solid var(--line); }
+  .facts > div:last-child { border-bottom: 0; }
   .facts dt { margin: 0; } .facts dd { font-size: 1.1875rem; text-align: right; }
 }
 
@@ -247,7 +256,9 @@ h3 { font: 600 .8125rem/1.4 var(--f-text); letter-spacing: .12em; text-transform
 /* entradas: una vez, 14px y opacidad; la portada al cargar */
 .js .rv { opacity: 0; transform: translateY(14px); transition: opacity .7s ease-out, transform .7s var(--ease); transition-delay: var(--d, 0s); }
 .js .rv.in { opacity: 1; transform: none; }
-.js .hero__media img { animation: hero-img 1.2s var(--ease) both; }
+.js .hero__media > img { animation: hero-img 1.4s var(--ease) both; }
+.js .hero__detail { animation: detail-in .9s var(--ease) .35s both; }
+@keyframes detail-in { from { opacity: 0; transform: translateY(18px); } }
 @keyframes hero-img { from { transform: scale(1.06); opacity: .6; } }
 
 @media (prefers-reduced-motion: reduce) {
