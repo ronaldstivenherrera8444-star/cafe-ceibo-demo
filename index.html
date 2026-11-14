@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es" data-type="place" data-radius="soft" data-buttons="block" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Café Ceibo: café de especialidad en Barranco</title>
+<meta name="description" content="Página de demostración: un café de especialidad ficticio en Barranco con espresso, filtrados y reservas de mesa.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Café Ceibo: café de especialidad en Barranco">
+<meta property="og:description" content="Página de demostración: un café de especialidad ficticio en Barranco con espresso, filtrados y reservas de mesa.">
+<meta property="og:image" content="assets/img/photo-m61716670-960.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#f8f5ef">
+<!-- canonical: añadir seo.dominio en cliente.json -->
+<meta name="robots" content="noindex">
+<meta name="site-kind" content="other"><meta name="page-type" content="place"><meta name="page-kind" content="place">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<style>
+:root {
+  --p-bg: #f8f5ef; --p-surface: #ede7dc; --p-ink: #1f1b18; --p-muted: #645c54;
+  --p-accent: #b8381f; --p-accent-ink: #ffffff; --p-action: #b8381f; --p-action-ink: #ffffff;
+  --p-inv-bg: #1f1b18; --p-inv-surface: #1f1b18; --p-inv-ink: #f8f5ef; --p-inv-muted: #ede7dc;
+  --p-inv-accent: #f8f5ef; --p-inv-accent-ink: #1f1b18; --p-inv-action: #f8f5ef; --p-inv-action-ink: #1f1b18;
+  --font-display: "Outfit", system-ui, sans-serif;
+  --font-text: "Outfit", system-ui, sans-serif;
+  --display-weight: 400; --display-tracking: -0.03em;
+}
+</style>
+<link rel="stylesheet" href="estilos.css">
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<link rel="modulepreload" href="assets/moments/moments.js">
+<link rel="modulepreload" href="assets/moments/lib.js">
+<link rel="modulepreload" href="assets/moments/word-highlight/moment.js">
+<script type="application/json" id="sitio-config">{"whatsapp":"","mensaje":"Hola, quiero reservar una mesa."}</script>
+</head>
+<body>
+<header class="nav nav--split">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Saltar al contenido</a>
+    <a class="nav__logo" href="#top"><span class="mark" data-mark="arc" aria-hidden="true"></span>Ceibo</a>
+    <nav class="nav__links" aria-label="Principal">
+      <div class="nav__item"><a class="nav__link" href="#carta">Carta</a></div>
+      <div class="nav__item"><a class="nav__link" href="#especialidades">Especialidades</a></div>
+      <div class="nav__item"><a class="nav__link" href="#historia">Historia</a></div>
+      <div class="nav__item"><a class="nav__link" href="#galeria">Galería</a></div>
+      <div class="nav__item"><a class="nav__link" href="#visit">Visita</a></div>
+    </nav>
+    <div class="nav__actions"><a class="btn btn--primary" href="#reservas">Reservar mesa</a></div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menú">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero hero--place" data-enter aria-labelledby="hero-h">
+    <img src="assets/img/photo-m61716670.jpg" srcset="assets/img/photo-m61716670-500.jpg 500w, assets/img/photo-m61716670-960.jpg 960w, assets/img/photo-m61716670-1280.jpg 1280w, assets/img/photo-m61716670.jpg 1920w" sizes="(max-width: 639px) 188vw, 100vw" width="1920" height="1280" alt="Dos chorros de espresso cayendo en una taza blanca en la barra" fetchpriority="high" decoding="async" class="hero__bg" data-phone-fill style="--ly-pos: 45% 60%">
+    <div class="wrap"><div class="hero-text">
+      <div class="hero__text">
+        <h1 id="hero-h">Café de especialidad en Barranco</h1>
+        <p class="hero__lead">Espresso, filtrados y tostado propio, de martes a domingo desde las 8:00.</p>
+        <div class="btn-row"><a class="btn btn--primary" href="#reservas">Reservar mesa<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section" id="visit" data-place="visit" aria-labelledby="visit-h" style="--h: 1">
+    <div class="wrap">
+      <div class="section-head"><h2 id="visit-h">Visita en Barranco</h2></div>
+      <p class="type-moment"><a href="https://www.openstreetmap.org/search?query=Barranco%2C%20Lima" target="_blank" rel="noopener">Barranco, Lima</a></p>
+      <div class="grid grid--top" style="margin-top: var(--s-6, 32px)">
+        <div class="visit visit--card span-6">
+          <div class="visit__cols">
+            <div class="visit__col stack-4">
+              <address class="visit__address">Barranco<br>Lima</address>
+              <a class="link" href="https://www.openstreetmap.org/search?query=Barranco%2C%20Lima" target="_blank" rel="noopener">Ver la zona</a>
+              <button class="btn btn--secondary" type="button" data-demo="whatsapp">Escribir por WhatsApp (demo)</button>
+            </div>
+            <div class="visit__col"><dl class="hours" data-tz="America/Lima" data-assumed><dt data-days="tue-fri">Martes a viernes</dt><dd>8:00–20:00</dd><dt data-days="sat,sun">Sábado y domingo</dt><dd>9:00–21:00</dd><dt data-days="mon">Lunes</dt><dd>Cerrado</dd></dl></div>
+          </div>
+        </div>
+        <figure class="pl-photo pl-photo--end span-6 start-7" style="--pl-r: 1.333"><img src="assets/img/photo-m61713103.jpg" srcset="assets/img/photo-m61713103-500.jpg 500w, assets/img/photo-m61713103-960.jpg 960w, assets/img/photo-m61713103.jpg 1280w" sizes="(max-width: 1023px) 100vw, 50vw" width="1280" height="853" alt="Café filtrado goteando en una jarra de vidrio sobre la balanza de la barra" loading="lazy" decoding="async" style="object-position: 58% 45%"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="carta" aria-labelledby="carta-h" style="--hm: 2">
+    <div class="wrap">
+      <div class="section-head"><h2 id="carta-h">Carta de espresso y filtrados</h2><p>Precios en soles. <a class="link" href="#reservas">Reservar mesa</a></p></div>
+      <div class="grid grid--top">
+        <div class="span-3">
+          <p class="t-label">Espresso</p>
+          <ul class="rows">
+            <li><span class="rows__name">Espresso<small>Doble, del tueste de la semana</small></span><span class="rows__value" data-assumed>S/ 8</span></li>
+            <li><span class="rows__name">Cortado<small>Partes iguales de leche</small></span><span class="rows__value" data-assumed>S/ 10</span></li>
+            <li><span class="rows__name">Flat white<small>Leche entera o de avena</small></span><span class="rows__value" data-assumed>S/ 12</span></li>
+            <li><span class="rows__name">Capuchino<small>Taza de 180 ml</small></span><span class="rows__value" data-assumed>S/ 12</span></li>
+            <li><span class="rows__name">Americano<small>Espresso doble y agua caliente</small></span><span class="rows__value" data-assumed>S/ 9</span></li>
+            <li><span class="rows__name">Mocaccino<small>Con cacao de Piura</small></span><span class="rows__value" data-assumed>S/ 13</span></li>
+          </ul>
+        </div>
+        <div class="span-3">
+          <p class="t-label">Filtrados</p>
+          <ul class="rows">
+            <li><span class="rows__name">V60<small>Origen Cajamarca</small></span><span class="rows__value" data-assumed>S/ 14</span></li>
+            <li><span class="rows__name">Chemex<small>Para dos personas</small></span><span class="rows__value" data-assumed>S/ 24</span></li>
+            <li><span class="rows__name">Prensa francesa<small>Cuerpo pleno, 4 minutos</small></span><span class="rows__value" data-assumed>S/ 13</span></li>
+            <li><span class="rows__name">Cold brew<small>Reposado 18 horas</small></span><span class="rows__value" data-assumed>S/ 13</span></li>
+            <li><span class="rows__name">AeroPress<small>Taza limpia y brillante</small></span><span class="rows__value" data-assumed>S/ 14</span></li>
+            <li><span class="rows__name">Sifón<small>Para mesa, 2 tazas</small></span><span class="rows__value" data-assumed>S/ 26</span></li>
+          </ul>
+        </div>
+        <div class="offer-pair span-6 start-7">
+          <a href="#galeria" aria-label="Ver la galería: Manos del barista compactando el café molido en el portafiltro"><img src="assets/img/photo-m187311853-1200.webp" srcset="assets/img/photo-m187311853-1200.webp 1200w" sizes="(max-width: 639px) 150vw, (max-width: 1023px) 90vw, 560px" width="1200" height="800" alt="Manos del barista compactando el café molido en el portafiltro" loading="lazy" decoding="async" style="object-position: 58% 50%"></a>
+          <a href="#galeria" aria-label="Ver la galería: Una taza pequeña recibiendo un ristretto bajo un portafiltro sin fondo"><img src="assets/img/photo-m28989985-1200.webp" srcset="assets/img/photo-m28989985-1200.webp 1200w" sizes="(max-width: 639px) 150vw, (max-width: 1023px) 90vw, 560px" width="1200" height="857" alt="Una taza pequeña recibiendo un ristretto bajo un portafiltro sin fondo" loading="lazy" decoding="async" style="object-position: 62% 62%"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="especialidades" aria-labelledby="esp-h">
+    <div class="wrap">
+      <div class="section-head"><h2 id="esp-h">Especialidades de la casa</h2><p>Lo que más se pide en la barra. <a class="link" href="#carta">Ver la carta</a></p></div>
+      <div class="grid goods">
+        <a class="good span-3" href="#reservas" aria-label="Ristretto de Cajamarca, S/ 9. Reservar mesa">
+          <span class="good__img"><img src="assets/img/photo-m61713028-960.jpg" srcset="assets/img/photo-m61713028-500.jpg 500w, assets/img/photo-m61713028-960.jpg 960w, assets/img/photo-m61713028.jpg 1280w" sizes="(max-width: 639px) 240px, (max-width: 1023px) 90vw, 560px" width="1280" height="853" alt="Ristretto saliendo de un portafiltro sin fondo" loading="lazy" decoding="async" style="object-position: 50% 50%"></span>
+          <span class="good__body"><span class="good__name">Ristretto de Cajamarca</span><span class="good__desc">Corto, dulce, notas de panela</span><span class="good__price" data-assumed>S/ 9</span></span>
+        </a>
+        <a class="good span-3" href="#reservas" aria-label="Latte de avena, S/ 13. Reservar mesa">
+          <span class="good__img"><img src="assets/img/photo-m201752739-960.jpg" srcset="assets/img/photo-m201752739-500.jpg 500w, assets/img/photo-m201752739-960.jpg 960w" sizes="(max-width: 639px) 240px, (max-width: 1023px) 90vw, 560px" width="960" height="1440" alt="Leche texturizada en una jarra roja junto a la máquina" loading="lazy" decoding="async" style="object-position: 40% 55%"></span>
+          <span class="good__body"><span class="good__name">Latte de avena</span><span class="good__desc">Leche vegetal sin azúcar añadida</span><span class="good__price" data-assumed>S/ 13</span></span>
+        </a>
+        <a class="good span-3" href="#reservas" aria-label="Flat white, S/ 12. Reservar mesa">
+          <span class="good__img"><img src="assets/img/photo-c141-960.jpg" srcset="assets/img/photo-c141-500.jpg 500w, assets/img/photo-c141-960.jpg 960w, assets/img/photo-c141.jpg 1280w" sizes="(max-width: 639px) 240px, (max-width: 1023px) 90vw, 560px" width="1280" height="853" alt="Leche vertida en una taza oscura sostenida con dos manos" loading="lazy" decoding="async" style="object-position: 50% 50%"></span>
+          <span class="good__body"><span class="good__name">Flat white</span><span class="good__desc">Doble ristretto y leche sedosa</span><span class="good__price" data-assumed>S/ 12</span></span>
+        </a>
+        <a class="good span-3" href="#reservas" aria-label="Café en grano 250 g, S/ 38. Reservar mesa">
+          <span class="good__img"><img src="assets/img/photo-m147143943-960.jpg" srcset="assets/img/photo-m147143943-500.jpg 500w, assets/img/photo-m147143943-960.jpg 960w, assets/img/photo-m147143943.jpg 1280w" sizes="(max-width: 639px) 240px, (max-width: 1023px) 90vw, 560px" width="1280" height="853" alt="Granos recién tostados cayendo a la bandeja de enfriado" loading="lazy" decoding="async" style="object-position: 50% 50%"></span>
+          <span class="good__body"><span class="good__name">Café en grano 250&nbsp;g</span><span class="good__desc">Tueste de la semana, para llevar</span><span class="good__price" data-assumed>S/ 38</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section statement" id="historia" data-moment="word-highlight" aria-label="Historia de Ceibo">
+    <div class="wrap">
+      <p class="t-label">Historia de Ceibo</p>
+      <p class="mo-wh__text">Somos un equipo pequeño de baristas y tostadores. Compramos café a productores de Cajamarca y Amazonas, lo tostamos aquí cada martes y lo servimos en una barra de ocho asientos, <strong>frente a ti</strong>.</p>
+    </div>
+  </section>
+
+  <section class="section" id="galeria" aria-labelledby="galeria-h" style="--hm: 2">
+    <div class="wrap">
+      <div class="section-head"><h2 id="galeria-h">Galería del tostado y la barra</h2><p>Del tambor de tueste a la taza. <a class="link" href="#reservas">Reservar mesa</a></p></div>
+      <div class="grid trio">
+        <a class="t5 span-5" href="#reservas" aria-label="Reservar mesa: Espresso servido desde una jarrita en una taza blanca sobre la barra de madera"><img src="assets/img/photo-m61714648-500.jpg" srcset="assets/img/photo-m61714648-500.jpg 500w" sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 486px" width="500" height="746" alt="Espresso servido desde una jarrita en una taza blanca sobre la barra de madera" loading="lazy" decoding="async" style="object-position: 60% 70%"></a>
+        <a class="t4 span-4" href="#reservas" aria-label="Reservar mesa: Granos recién tostados cayendo del tambor a la bandeja de enfriado"><img src="assets/img/photo-m147143963.jpg" srcset="assets/img/photo-m147143963-500.jpg 500w, assets/img/photo-m147143963-960.jpg 960w, assets/img/photo-m147143963.jpg 1280w" sizes="(max-width: 639px) 250vw, (max-width: 1023px) 50vw, 545px" width="1280" height="901" alt="Granos recién tostados cayendo del tambor a la bandeja de enfriado" loading="lazy" decoding="async" style="object-position: 40% 50%"></a>
+        <a class="t3 span-3" href="#reservas" aria-label="Reservar mesa: Una bandeja con cuatro cafés llevada a lo largo de la barra"><img src="assets/img/photo-m189498721.jpg" srcset="assets/img/photo-m189498721-500.jpg 500w, assets/img/photo-m189498721-960.jpg 960w, assets/img/photo-m189498721.jpg 1280w" sizes="(max-width: 639px) 250vw, (max-width: 1023px) 30vw, 282px" width="1280" height="853" alt="Una bandeja con cuatro cafés llevada a lo largo de la barra" loading="lazy" decoding="async" style="object-position: 45% 60%"></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer closing footer--visit" id="contact" aria-label="Reservas y visita" style="--h: 2">
+  <div class="wrap">
+    <div class="closing__cta close--booking" id="reservas" aria-labelledby="reservas-h">
+      <div class="section-head section-head--split"><h2 id="reservas-h">Reservar mesa</h2><p>Respondemos el mismo día.</p></div>
+      <div class="grid grid--top">
+        <div class="span-6">
+          <form class="form" action="#reservas" method="post" data-endpoint="" data-sent="Tu pedido llegó. Te responderemos para confirmar." data-fix="Revisa {n} campo(s) marcados." novalidate>
+            <div class="field"><label for="f-name">Nombre</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err">
+              <p class="field__error" id="f-name-err" hidden>Escribe el nombre de la reserva.</p></div>
+            <div class="field"><label for="f-date">Día</label>
+              <input id="f-date" name="date" type="text" autocomplete="off" required aria-describedby="f-date-err" placeholder="Sábado 15">
+              <p class="field__error" id="f-date-err" hidden>Escribe el día en que quieres venir.</p></div>
+            <div class="field"><label for="f-guests">Personas</label>
+              <input id="f-guests" name="guests" type="text" inputmode="numeric" pattern="[0-9]{1,2}" autocomplete="off" required aria-describedby="f-guests-err">
+              <p class="field__error" id="f-guests-err" hidden>Escribe cuántas personas, en número.</p></div>
+            <div class="btn-row"><button class="btn btn--primary" type="submit">Pedir mesa</button></div>
+            <p class="form__status" role="status" data-form-status></p>
+            <p class="t-small muted">Demostración: este formulario no envía ni guarda datos.</p>
+          </form>
+        </div>
+        <figure class="pl-photo pl-photo--end span-6 start-7" style="--pl-r: 1.333"><img src="assets/img/photo-m61713362.jpg" srcset="assets/img/photo-m61713362-500.jpg 500w, assets/img/photo-m61713362-960.jpg 960w, assets/img/photo-m61713362.jpg 1280w" sizes="(max-width: 1023px) 100vw, 50vw" width="1280" height="853" alt="Leche vertida sobre un latte en una taza blanca sostenida con una mano" loading="lazy" decoding="async" style="object-position: 50% 55%"></figure>
+      </div>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <address class="footer__address">Barranco, Lima</address>
+          <p><a class="link" href="https://www.openstreetmap.org/search?query=Barranco%2C%20Lima" target="_blank" rel="noopener">Ver la zona</a></p>
+        </div>
+        <div class="span-4 stack-4" id="contacto">
+          <h3>Contacto</h3>
+          <ul class="contact-list">
+            <li><button class="link" type="button" data-demo="whatsapp">WhatsApp (demo)</button></li>
+            <li><button class="link" type="button" data-demo="instagram">Instagram (demo)</button></li>
+            <li><button class="link" type="button" data-demo="correo">Correo (demo)</button></li>
+          </ul>
+        </div>
+        <div class="span-4 stack-4"><h3>Horario</h3><dl class="hours" data-tz="America/Lima" data-assumed><dt data-days="tue-fri">Martes a viernes</dt><dd>8:00–20:00</dd><dt data-days="sat,sun">Sábado y domingo</dt><dd>9:00–21:00</dd><dt data-days="mon">Lunes</dt><dd>Cerrado</dd></dl></div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 Café Ceibo · negocio ficticio, sitio de demostración</span>
+        <a class="credits" href="credits.html">Créditos de fotografías</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<nav class="actionbar" aria-label="Acciones rápidas">
+  <button class="btn btn--secondary" type="button" data-demo="whatsapp">WhatsApp (demo)</button>
+  <a class="btn btn--primary" href="#reservas">Reservar mesa</a>
+</nav>
+<div class="demo-toast" role="status" aria-live="polite" data-demo-toast></div>
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
